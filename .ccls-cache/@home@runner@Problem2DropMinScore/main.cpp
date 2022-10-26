@@ -2,6 +2,10 @@
 #include <iostream>
 using namespace std;
 
+///////////////////////// Function Prototypes ////////////////////////
+void printMatrix(double matrix[][8], int N_ROWS, int N_COLUMNS);
+
+////////////////////////////// Main Code ///////////////////////////
 int main() {
 
   const int N_ROWS = 5;
@@ -29,7 +33,7 @@ int main() {
 
   // need outer for loop to loop through rows
   const int O_ROWS = 5;
-  const int O_COLUMNS = 7;
+  const int O_COLUMNS = 8;
 
   double gradeOutput[O_ROWS][O_COLUMNS];
 
@@ -51,11 +55,32 @@ int main() {
     }
   }
 
-  cout << "The final grades are: " << endl;
-  for (int k = 0; k < O_ROWS; k++) {
-    for (int l = 0; l < O_COLUMNS; l++) {
-      cout << setw(6) << gradeOutput[k][l] << " ";
-    }
+  cout << "The first 5 final grades are: " << endl;
+  printMatrix(gradeOutput, O_ROWS, O_COLUMNS);
+}
+
+/////////////////////// USER DEFINED FUNCTIONS /////////////////////
+
+// function to print the matrix in a matrix with 3 columns
+void printMatrix(double matrix[][8], int N_ROWS, int N_COLUMNS) {
+  int row, col;
+  for (row = 0; row < N_ROWS; row++) {
+    for (col = 0; col < N_COLUMNS; col++)
+      cout << setw(6) << matrix[row][col] << " ";
+
     cout << endl;
   }
+}
+
+// function to find min value
+
+double minValue(double matrix[][8], int STUDENT, int EXAMS)
+
+// for a single student
+for (column...){
+  if(matrix [student][column] < minVal){
+    minVal = matrix [student][column];
+  }
+then sum all of the exams together, subtract index0 (smallest grade) and divide to get average.
+update matrix to includ 8th exam score
 }
