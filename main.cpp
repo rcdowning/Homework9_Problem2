@@ -61,7 +61,7 @@ int main() {
 
 /////////////////////// USER DEFINED FUNCTIONS /////////////////////
 
-// function to print the matrix in a matrix with 3 columns
+// function to print the matrix in a matrix
 void printMatrix(double matrix[][8], int N_ROWS, int N_COLUMNS) {
   int row, col;
   for (row = 0; row < N_ROWS; row++) {
@@ -74,13 +74,31 @@ void printMatrix(double matrix[][8], int N_ROWS, int N_COLUMNS) {
 
 // function to find min value
 
-double minValue(double matrix[][8], int STUDENT, int EXAMS)
+double minValue(double matrix[][8], int N_ROWS, int N_COLS){
+  double minVal = matrix[N_ROWS][0];
 
-// for a single student
-for (column...){
-  if(matrix [student][column] < minVal){
-    minVal = matrix [student][column];
+    for (int c = 0; c < N_COLS; c++){
+      if(matrix[N_ROWS][c] < minVal)
+          matrix[N_ROWS][c] = minVal;
+    }
+
+  
   }
-then sum all of the exams together, subtract index0 (smallest grade) and divide to get average.
-update matrix to includ 8th exam score
+
+
+
+
+  
+    // for a single student
+    for(int c = 0; c < STUDENT; c++){
+      if (matrix[student][c] < minVal)
+    }
+      if (matrix[student][c] < minVal) {
+  minVal = matrix[student][column];
 }
+then sum all of the exams together,
+    subtract index0(smallest grade) and divide to get average.update matrix to
+                                        includ 8th exam score
+
+}
+  
