@@ -4,6 +4,7 @@ using namespace std;
 
 ///////////////////////// Function Prototypes ////////////////////////
 void printMatrix(double matrix[][8], int N_ROWS, int N_COLUMNS);
+double minValue(double matrix[][8], int N_ROWS, int N_COLS);
 
 ////////////////////////////// Main Code ///////////////////////////
 int main() {
@@ -57,6 +58,10 @@ int main() {
 
   cout << "The first 5 final grades are: " << endl;
   printMatrix(gradeOutput, O_ROWS, O_COLUMNS);
+
+  // update 8th column to be in grade matrix
+  gradeOutput[r][8];
+  
 }
 
 /////////////////////// USER DEFINED FUNCTIONS /////////////////////
@@ -74,31 +79,18 @@ void printMatrix(double matrix[][8], int N_ROWS, int N_COLUMNS) {
 
 // function to find min value
 
-double minValue(double matrix[][8], int N_ROWS, int N_COLS){
+double minValue(double matrix[][8], int N_ROWS, int N_COLS) {
   double minVal = matrix[N_ROWS][0];
+  double grade;
 
-    for (int c = 0; c < N_COLS; c++){
-      if(matrix[N_ROWS][c] < minVal)
-          matrix[N_ROWS][c] = minVal;
-    }
-
-  
+  for (int c = 0; c < N_COLS; c++) {
+    if (matrix[N_ROWS][c] < minVal)
+      matrix[N_ROWS][c] = minVal;
   }
 
+  (matrix[N_ROWS][1] + matrix[N_ROWS][2] + matrix[N_ROWS][3] -
+   matrix[N_ROWS][0]) /
+      3 = grade;
 
-
-
-  
-    // for a single student
-    for(int c = 0; c < STUDENT; c++){
-      if (matrix[student][c] < minVal)
-    }
-      if (matrix[student][c] < minVal) {
-  minVal = matrix[student][column];
+  return grade;
 }
-then sum all of the exams together,
-    subtract index0(smallest grade) and divide to get average.update matrix to
-                                        includ 8th exam score
-
-}
-  
